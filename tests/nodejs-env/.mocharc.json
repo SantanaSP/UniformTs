@@ -1,0 +1,6 @@
+{
+  "spec": [
+    "**/*.spec.js"
+  ],
+  "recursive": true
+}
