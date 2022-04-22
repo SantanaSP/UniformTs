@@ -11,7 +11,7 @@
     "typescript": "next"
   },
   "dependencies": {
-    "@sparklink/uniform-ts-stream-web": "workspace:^"
+    "@sparkNFT/uniform-ts": "workspace:^"
   },
   "scripts": {
     "test": "rm -r generated && tsc && mocha"

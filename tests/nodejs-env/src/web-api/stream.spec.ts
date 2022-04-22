@@ -1,7 +1,7 @@
 import {
   ReadableStream,
   WritableStream,
-} from "@sparklink/uniform-ts-stream-web";
+} from "@sparklink/uniform-ts/stream-web";
 import { setInterval as every } from "node:timers/promises";
 
 import { performance } from "node:perf_hooks";

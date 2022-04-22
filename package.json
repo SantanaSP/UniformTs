@@ -1,18 +1,43 @@
 {
-  "name": "@spark-link/uniform-ts",
+  "name": "@sparkNFT/uniform-ts",
   "version": "0.0.1",
   "main": "generated/index.js",
   "type": "module",
-  "repository": "git@github-santana:SparkNFT/UniformTs.git",
+  "repository": "https://github.com/SparkNFT/UniformTs.git",
   "author": "Anonymous <no-reply@github.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^17.0.25",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
-    "typescript": "^4.6.3"
+    "typescript": "next"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "workspaces": [
+    "tests/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@sparkNFT/uniform-ts-stream-web": "workspace:^"
+  },
+  "exports": {
+    "./stream-web": "./generated/stream-web.js"
+  },
+  "files": [
+    "generated"
+  ],
+  "typesVersions": {
+    "*": {
+      "stream-web": [
+        "generated/stream-web.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "clear": "rm -rf generated",
+    "build": "yarn clear && tsc"
+  }
 }
