@@ -1,1 +1,1 @@
-export * from "@sparklink/uniform-ts-stream-web";
+export * from "@sparkNFT/uniform-ts-stream-web";
